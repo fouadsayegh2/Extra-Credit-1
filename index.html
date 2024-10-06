@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Assignment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #333;
+            margin-top: 50px;
+        }
+
+        input[type="button"] {
+            background-color: #20a76a;
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 10px 20px;
+        }
+
+        input[type="button"]:hover {
+            background-color: #0568006c;
+        }
+
+        div.container {
+            margin: 0 auto;
+            width: 80%;
+            max-width: 600px;
+            padding: 20px;
+            background-color: white;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class = "container">
+
+        <h1>JavaScript Worksheet</h1>
+
+        <input type = "button" value = "Problem 1" onclick = "problem_1()">
+
+        <input type = "button" value = "Problem 2" onclick = "problem_2()">
+
+        <input type = "button" value = "Problem 3" onclick = "problem_3()">
+
+        <input type = "button" value = "Problem 4" onclick = "problem_4()">
+
+        <input type = "button" value = "Problem 5" onclick = "problem_5()">
+
+    </div>
+
+    <footer>
+        &copy; 2024 JavaScript Assignment. All rights reserved.
+    </footer>
+
+<script>
+
+    function problem_1(){
+        let output = "";
+
+        for (let i = 40; i >= 10; i -= 2) {
+            output += i + ", ";
+        }
+
+        alert(output);
+    }
+
+    function problem_2(){
+        let sum = 0;
+
+        while (sum <= 20) {
+            let number = parseInt(prompt("Enter a number: "));
+            sum += number; 
+            alert("Current Sum: " + sum);
+        }
+
+        if (sum > 20) {
+            alert("Sum exceeded 20!"); 
+        }
+    }
+
+    function problem_3(){
+        let sum = 0;
+        let numbers = [];
+
+        while (sum <= 20) {
+            let num = parseInt(prompt("Enter a number: "));
+            sum += num;
+            numbers.push(num);
+        }
+
+        alert("The numbers entered are: " + numbers.join(", "));
+    }
+
+    function problem_4(){
+        let songs = {
+            "90210": "Travis Scott \n",
+
+            "Do Not Disturb": "Drake \n",
+
+            "English Man In New York": "Sting \n",
+
+            "Vienna": "Billy Joel \n",
+
+            "Strangers In The Night": "Frank Sinatra"
+    };
+                
+        let output = "";
+
+        for (let song in songs) {
+            output += song + " by " + songs[song] + "\n";
+        }
+
+        alert(output);
+    }
+
+    function problem_5(){
+        let songs = {
+            "90210": "Travis Scott",
+
+            "Do Not Disturb": "Drake",
+
+            "English Man In New York": "Sting",
+
+            "Vienna": "Billy Joel",
+
+            "Strangers In The Night": "Frank Sinatra"
+        };
+                
+        let band = prompt("Enter the name of the singer / band: ");
+        let output = "";
+
+        for (let song in songs) {
+
+            if (songs[song].toLowerCase() === band.toLowerCase()) {
+                output += song + " by " + songs[song] + "\n";
+            }
+        }
+
+        if (output === "") {
+            alert("There are no songs found!");
+        } else {
+            alert(output);
+        }
+    }
+    
+    function runningTheProblems() {
+        problem_1();
+
+        problem_2();
+
+        problem_3();
+
+        problem_4();
+
+        problem_5();
+    }
+
+</script>
+</body>
+</html>
